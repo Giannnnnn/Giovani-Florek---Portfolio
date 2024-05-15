@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+body {
+    background-image: radial-gradient(rgb(255, 255, 255), #001147);
+    color: white;
+    font-family: "Anton", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url(./layered-waves-haikei.svg);
+}
+
+.curved-body {
+    position: relative;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150vh;
+
+}
+
+.title-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 0;
+    min-height: 0;
+    padding: 0;
+}
+
+.blue {
+    background-color: #6600FF;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: aquamarine;
+    transform: translate(85%, 60%);
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: rgb(255, 0, 208);
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+
+.first-line {
+    margin-top: 10vh;
+}
+
+.third-line {
+    margin: 0;
+
+}
+
+.icon {
+    margin-bottom: 0;
+    max-width: 45px;
+    max-height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+}
+
+.icons-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.icons-row {
+    margin-left: 150px;
+}
+
+.second-line {
+    margin-top: 0;
+    max-height: 50px;
+}
+
+.fourth-line {
+    margin-top: 0;
+    max-height: 200px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blux(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.hidden2 {
+    opacity: 0;
+    filter: blux(5px);
+    transform: translateX(-100%);
+    transition: all 2.5s;
+}
+
+.hidden3 {
+    opacity: 0;
+    filter: blux(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.hidden1s {
+    transition: all 1s;
+}
+
+.hidden2s {
+    transition: all 2s;
+}
+
+.hidden3s {
+    transform: translateX(100%);
+    transition: all 3s;
+}
+
+.hidden4s {
+    transition: all 4s;
+}
+
+.hidden5s {
+    transition: all 5s;
+}
+
+.hidden6s {
+    transform: translateX(-100%);
+    transition: all 5s;
+}
+
+.icons-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 100%;
+}
+
+.hidden6s {
+    transition: all 6s;
+}
+
+.giant-font {
+    font-size: 150px;
+}
+
+.medium-font {
+    font-size: 50px;
+}
+
+.small-font {
+    font-size: 25px;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    margin: 10px;
+    width: 200px;
+    height: 400px;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.logo:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.show {
+    opacity: 1;
+    filter: blux(0);
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+
+    .hidden2 {
+        transition: none;
+    }
+
+    .hidden3 {
+        transition: none;
+    }
+}
+
+@media (max-height: 900px) {
+    .giant-font {
+        font-size: 50px;
+    }
+
+    .medium-font {
+        font-size: 25px;
+    }
+
+    .small-font {
+        font-size: 13px;
+    }
+}
